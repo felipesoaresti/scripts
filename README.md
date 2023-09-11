@@ -1,0 +1,2 @@
+# scripts
+Sheel script Curso
