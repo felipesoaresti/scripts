@@ -1,0 +1,12 @@
+#!/bin/bash
+
+# Felipe Soares
+# Data  : 17/01/2024
+
+if type waitmax >/dev/null 2>&1
+then
+   OUT=$(waitmax -s 9 2 df -PTk | egrep  nfs )
+   [ x"$OUT" == x ] && exit
+   echo '<<<df>>>'
+   echo "${OUT}" | sed 's/ nfs / NFS /g'
+fi
